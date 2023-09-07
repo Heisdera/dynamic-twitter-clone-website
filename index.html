@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="../fontawesome-css/css/all.css" /> -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Twitter</title>
+  </head>
+  <body>
+    <section id="twitter">
+      <nav class="navbar">
+        <div class="container">
+          <i class="fab fa-twitter"></i>
+          <div class="main-nav">
+            <ul>
+              <li>
+                <a class="current" href="#"><i class="fas fa-home"></i>Home</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-hashtag"></i>Explore</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-bell"></i>Notifications</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-envelope"></i>Messages</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-bookmark"></i>Bookmarks</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fab fa-twitter-square"></i>Twitter Blue</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-user"></i>Profile</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-ellipsis"></i>More</a>
+              </li>
+            </ul>
+          </div>
+          <a class="btn" href="#">Tweet</a>
+
+          <div class="account">
+            <img src="./img/heisdera_400x400.jpg" alt="" />
+            <h5>Raphael Wisdom <span>@Heisdera_Tech</span></h5>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+      </nav>
+
+      <main class="home">
+        <div class="sticky">
+          <h3>Home</h3>
+          <div class="home-nav">
+            <div class="flex">
+              <a href="for-you.html">For you</a>
+              <div></div>
+            </div>
+            <div class="flex">
+              <a href="#" class="current">Following</a>
+              <div class="underline"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tweet-nav">
+          <div class="tweet-img">
+            <img src="./img/heisdera_400x400.jpg" alt="" />
+          </div>
+          <form class="flex-column post-input-form">
+            <input
+              type="text"
+              name="message"
+              id="message"
+              class="post-input"
+              placeholder="What's happening?"
+            />
+            <div class="flex-row">
+              <div>
+                <i class="far fa-image"></i>
+                <i class="far fa-file-video"></i>
+                <i class="fas fa-list"></i>
+                <i class="far fa-face-smile"></i>
+                <i class="far fa-calendar"></i>
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <button type="submit" class="submit">Tweet</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="customize">
+          <i class="fas fa-ellipsis-h"></i>
+          <h2>Customize your view <i class="fas fa-palette"></i></h2>
+          <p>
+            Sometimes you need to freshen things up a bit, like swapping colors,
+            super-sizing your text, or revisiting your dark mode selection, all
+            of which you can do in your settings.
+          </p>
+          <a href="#" class="btn-dark">
+            Change view
+            <i class="fas fa-moon"></i>
+            <!-- <i class="fas fa-sun"></i> -->
+          </a>
+        </div>
+
+        <div class="tweets-container"></div>
+      </main>
+
+      <aside id="trend">
+        <div class="search">
+          <i class="fas fa-search"></i>
+          <input type="search" name="search" placeholder="Search Twitter" />
+        </div>
+
+        <div class="box-1">
+          <h3>Trends for you</h3>
+          <div class="wrapper">
+            <ul class="trends-container"></ul>
+          </div>
+          <h4>Show more</h4>
+        </div>
+
+        <div class="box-2">
+          <h3>Who to follow</h3>
+          <div class="follow">
+            <img src="./img/IeyYTxsB_400x400.jpg" alt="" />
+            <h5>
+              Kevin De Bruyne
+              <i class="fas fa-check-circle"></i>
+              <span>@KevinDeBruyne</span>
+            </h5>
+            <a href="#" class="btn-dark" id="toggle-dark-mode">Follow</a>
+          </div>
+          <div class="follow">
+            <img src="./img/qdrDtPeH_400x400.jpg" alt="" />
+            <h5>
+              Kylian Mbappé
+              <i class="fas fa-check-circle"></i>
+              <span>@KMbappe</span>
+            </h5>
+            <a href="#" class="btn-dark">Follow</a>
+          </div>
+          <div class="follow">
+            <img src="./img/tx_TaL7Q_400x400.jpg" alt="" />
+            <h5>
+              Namya
+              <span>@namyakhann</span>
+            </h5>
+            <a href="#" class="btn-dark">Follow</a>
+          </div>
+          <h4>Show more</h4>
+        </div>
+
+        <footer>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Policy</a> <br />
+          <a href="#">Accessibility</a>
+          <a href="#">Ads info</a>
+          <a href="#">More &bullet;&bullet;&bullet;</a> <br />
+          <a href="#">&copy; 2023 Twitter,Inc.</a>
+        </footer>
+      </aside>
+    </section>
+
+    <script
+      src="https://kit.fontawesome.com/0f816a078b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

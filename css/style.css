@@ -1,0 +1,602 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --icon-color: #030303cc;
+  --brand-color: #00acee;
+  --hover-color: #ddd;
+  --input-color: #646464;
+  --border-color: #eee;
+  --blur-color: rgba(255, 255, 255, 0.5);
+  --transition: all 0.3s linear;
+  --max-with: 1280px;
+}
+
+.dark-mode-theme {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --icon-color: #fdfdfdcc;
+  --brand-color: #00acee;
+  --hover-color: #8d8d8d;
+  --input-color: #ddd;
+  --border-color: #70707070;
+  --blur-color: rgba(0, 0, 0, 0.5);
+  --transition: all 0.3s linear;
+  --max-width: 1280px;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  max-width: var(--max-with);
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  margin: auto;
+  transition: var(--transition);
+}
+
+#twitter {
+  display: grid;
+  grid-template-columns: 2.7fr 6fr 4fr;
+  width: var(--max-with);
+}
+
+.navbar .container {
+  padding: 5px 5px;
+}
+
+ul {
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+i {
+  color: var(--icon-color);
+}
+
+p,
+span {
+  cursor: default;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.blue {
+  color: var(--brand-color);
+}
+
+.green {
+  color: #0aee00;
+}
+
+.btn-dark:active,
+button[type='submit']:active {
+  transform: translateY(3px);
+  transition: var(--transition);
+}
+
+/* Nav - Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 650px;
+  z-index: 1;
+  background: var(--primary-color);
+  transition: var(--transition);
+}
+
+.main-nav ul li {
+  padding: 14px 0;
+}
+
+.main-nav ul li a {
+  padding: 14px 16px;
+  border-radius: 30px;
+}
+
+.main-nav ul li a:hover {
+  background: var(--hover-color);
+}
+
+.main-nav ul li:last-child {
+  padding-bottom: 0px;
+}
+
+.main-nav ul li i {
+  font-size: 20px;
+  margin-right: 20px;
+  width: 23px;
+  color: var(--icon-color);
+  text-align: center;
+}
+
+.main-nav ul li a {
+  font-size: 20px;
+  color: var(--icon-color);
+  letter-spacing: 0.4px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.current {
+  font-weight: bold !important;
+}
+
+.fa-twitter {
+  font-size: 28px;
+  color: var(--brand-color);
+  margin-left: 5px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.fa-twitter:hover {
+  background: var(--hover-color);
+}
+
+.fa-ellipsis {
+  border: 2px solid var(--icon-color);
+  border-radius: 100%;
+  padding: 0px 1px;
+}
+
+.btn {
+  display: inline-block;
+  color: var(--primary-color);
+  background: var(--brand-color);
+  border: none;
+  border-radius: 30px;
+  padding: 15px 90px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px #008cc8;
+}
+
+.btn:hover {
+  background: #008cc8;
+}
+
+.btn-dark {
+  display: inline-block;
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.account {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  margin-top: 64px;
+  margin-right: 10px;
+  padding: 10px 12px;
+  border-radius: 30px;
+  width: 100%;
+}
+
+.account:hover {
+  background: var(--hover-color);
+}
+
+.account img {
+  margin-right: 12px;
+  width: 37px;
+  border-radius: 50%;
+}
+
+.account h5 {
+  flex: 1;
+  font-size: 15px;
+}
+
+.account h5 span {
+  font-weight: 200;
+  color: var(--input-color);
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Main - Home */
+.home {
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.home .sticky {
+  position: sticky;
+  top: 0;
+  background-color: var(--blur-color);
+  backdrop-filter: blur(20px);
+  z-index: 10;
+  transition: background-color 0.3s linear;
+}
+
+.home .sticky > h3 {
+  padding: 17px;
+}
+
+.home-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border-color);
+  transition: border 0.3s linear;
+}
+
+.home-nav .flex {
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s;
+}
+
+.home-nav .flex:hover {
+  background: var(--hover-color);
+}
+
+.home-nav .flex a {
+  text-align: center;
+  padding: 18px 0 14px 0;
+  font-size: 15px;
+}
+
+.home-nav .flex:first-child a {
+  color: var(--input-color);
+  font-weight: 500;
+}
+
+.underline {
+  align-self: center;
+  width: 60px;
+  height: 4px;
+  background: var(--brand-color);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tweet-nav {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid var(--border-color);
+  transition: border 0.3s linear;
+  padding: 10px 14px;
+}
+
+.tweet-nav .tweet-img img {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 14px;
+}
+
+.flex-column input {
+  height: 30px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 24px 0;
+  margin-bottom: 10px;
+  color: var(--input-color);
+  letter-spacing: 1px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+  height: 16px;
+  justify-content: space-between;
+}
+
+.flex-row > div {
+  display: flex;
+  flex-direction: row;
+  width: 220px;
+}
+
+.flex-row > div i {
+  flex: 1;
+  color: var(--brand-color);
+  text-align: start;
+}
+
+.flex-row button {
+  background: var(--brand-color);
+  color: var(--primary-color);
+  border: none;
+  font-weight: 800;
+  font-size: 12px;
+  opacity: 0.5;
+  padding: 8px 16px;
+  border-radius: 30px;
+  align-self: center;
+}
+
+.customize {
+  padding: 32px 24px;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+  transition: border 0.3s linear;
+  height: 240px;
+}
+
+.customize h2 {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.customize p {
+  line-height: 1.2;
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: var(--icon-color);
+}
+
+.customize .btn-dark {
+  border-radius: 40px;
+  padding: 14px 26px;
+  transition: var(--transition);
+}
+
+.customize .btn-dark i {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.customize .fa-ellipsis-h {
+  color: var(--icon-color);
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 18px;
+}
+
+/* FOLLOWING - TWEETS */
+.tweet .flex-column {
+  position: relative;
+  line-height: 1.3;
+  padding-top: 2px;
+}
+
+.tweet .flex-column > i {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.tweet .flex-column .fa-check-circle {
+  color: var(--brand-color);
+}
+
+.tweet .flex-column h4 > span {
+  color: var(--input-color);
+  font-weight: 100;
+}
+
+.tweet .flex-column > ul {
+  width: 85%;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.tweet .flex-column > ul li {
+  cursor: pointer;
+}
+
+.tweet:nth-child(4) .flex-column > div img,
+.tweet:nth-child(7) .flex-column > div img {
+  border-radius: 15px;
+  margin-top: 8px;
+  width: 100%;
+  border: 1px solid var(--hover-color);
+}
+
+.opt:nth-child(1) .flex-column > div img,
+.opt:nth-child(2) .flex-column > div img,
+.opt:nth-child(3) .flex-column > div img,
+.opt:nth-child(5) .flex-column > div img,
+.opt:nth-child(6) .flex-column > div img {
+  display: none;
+}
+
+.tweet:last-child {
+  border-bottom: none;
+}
+
+/* for you tweets */
+.border .flex-column > div img {
+  border-radius: 15px;
+  margin-top: 8px;
+  width: 85%;
+  border: 1px solid var(--hover-color);
+}
+
+.border:nth-child(3) .tweet-img img {
+  border-radius: 10px;
+}
+
+/* Aside - Trend */
+#trend {
+  padding: 6px 20px;
+  position: sticky;
+  top: 0;
+  height: 1400px;
+}
+
+.search {
+  background: var(--border-color);
+  border-radius: 30px;
+  padding: 0 10px;
+  margin-bottom: 13px;
+  position: sticky;
+  top: 6px;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  transition: var(--transition);
+  backdrop-filter: blur(40px);
+}
+
+.fa-search {
+  color: var(--input-color);
+  align-self: center;
+  padding: 0 14px 0 10px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--secondary-color);
+  font-size: 16px;
+  height: 45px;
+  width: 85%;
+}
+
+#trend .box-1 {
+  background: var(--border-color);
+  color: var(--secondary-color);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.box-1 h3 {
+  padding: 14px 0 0 18px;
+}
+
+.box-1 .box {
+  line-height: 1.3;
+  margin: 10px 0;
+}
+
+.box-1 .list {
+  position: relative;
+  padding: 10px 0px;
+  cursor: pointer;
+  padding: 14px 18px;
+  transition: background 0.2s;
+}
+
+.box-1 .list:hover {
+  background: var(--hover-color);
+}
+
+.wrapper i {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 18px;
+  color: var(--icon-color);
+}
+
+.wrapper span {
+  color: var(--icon-color);
+  font-size: 14px;
+}
+
+.box-1 > h4 {
+  padding: 0 0 14px 18px;
+  color: var(--brand-color);
+  font-weight: 100;
+}
+
+.box-2 {
+  background: var(--border-color);
+  color: var(--secondary-color);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.box-2 h3 {
+  padding: 14px 0 8px 18px;
+}
+
+.follow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  padding: 10px 12px;
+  border-radius: 30px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.follow:hover {
+  background: var(--hover-color);
+}
+
+.follow img {
+  margin-right: 12px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.follow h5 {
+  flex: 1;
+  font-size: 15px;
+}
+
+.follow h5 span {
+  font-weight: 200;
+  color: var(--input-color);
+  display: block;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.follow i {
+  color: var(--brand-color);
+}
+
+.follow .btn-dark {
+  padding: 10px 16px;
+  border-radius: 30px;
+}
+
+.box-2 > h4 {
+  padding: 14px 0 14px 18px;
+  color: var(--brand-color);
+  font-weight: 100;
+}
+
+/* Footer */
+footer {
+  padding: 0 18px;
+  margin-bottom: 60px;
+  line-height: 1.4;
+}
+
+footer a {
+  color: var(--input-color);
+  padding-right: 8px;
+  font-size: 14px;
+}
